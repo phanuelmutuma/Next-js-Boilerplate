@@ -13,27 +13,29 @@ const Main = (props: IMainProps) => (
     {props.meta}
 
     <div className="mx-auto max-w-screen-md">
-      <div className="border-b border-gray-300">
+      <header className="border-b border-gray-300">
         <div className="pt-16 pb-8">
-          <div className="text-3xl font-bold text-gray-900">
+          <h1 className="text-3xl font-bold text-gray-900">
             {AppConfig.title}
-          </div>
-          <div className="text-xl">{AppConfig.description}</div>
+          </h1>
+          <h4 className="text-xl">{AppConfig.description}</h4>
         </div>
-        <div>
+        <nav>
           <ul className="flex flex-wrap text-xl">
             <li className="mr-6">
-              <Link href="/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  Home
-                </a>
+              <Link
+                href="/"
+                className="border-none text-gray-700 hover:text-gray-900"
+              >
+                Home
               </Link>
             </li>
             <li className="mr-6">
-              <Link href="/about/">
-                <a className="border-none text-gray-700 hover:text-gray-900">
-                  About
-                </a>
+              <Link
+                href="/about/"
+                className="border-none text-gray-700 hover:text-gray-900"
+              >
+                About
               </Link>
             </li>
             <li className="mr-6">
@@ -44,25 +46,30 @@ const Main = (props: IMainProps) => (
                 GitHub
               </a>
             </li>
+            <li className="mr-6">
+              <Link
+                href="/blog/"
+                className="border-none text-gray-700 hover:text-gray-900"
+              >
+                Blog
+              </Link>
+            </li>
           </ul>
-        </div>
-      </div>
+        </nav>
+      </header>
 
-      <div className="content py-5 text-xl">{props.children}</div>
+      <main className="content py-5 text-xl">{props.children}</main>
 
-      <div className="border-t border-gray-300 py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Powered with{' '}
-        <span role="img" aria-label="Love">
-          ♥
-        </span>{' '}
-        by <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
+      <footer className="border-t border-gray-300 py-8 text-center text-sm">
+        © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}
+        <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>.
         {/*
          * PLEASE READ THIS SECTION
-         * We'll really appreciate if you could have a link to our website
+         * I'm an indie maker with limited resources and funds, I'll really appreciate if you could have a link to my website.
          * The link doesn't need to appear on every pages, one link on one page is enough.
-         * Thank you for your support it'll mean a lot for us.
+         * For example, in the `About` page. Thank you for your support, it'll mean a lot to me.
          */}
-      </div>
+      </footer>
     </div>
   </div>
 );

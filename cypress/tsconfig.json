@@ -3,10 +3,10 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["es5", "dom"],
-    "types": ["node", "cypress", "@testing-library/cypress"],
+    "types": ["node", "cypress", "@percy/cypress", "@testing-library/cypress"],
 
     "isolatedModules": false
   },
-  "include": ["**/*.cy.ts"],
+  "include": ["**/*.ts"],
   "exclude": []
 }
