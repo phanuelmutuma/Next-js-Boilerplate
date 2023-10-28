@@ -5,12 +5,19 @@
 /.pnp
 .pnp.js
 
+# Database
+*.db
+
 # testing
 /coverage
 
-# cypress
-cypress/screenshots
-cypress/videos
+# storybook
+storybook-static
+
+# playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
 
 # next.js
 /.next
@@ -38,7 +45,7 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# dotenv local files
+# local env files
 .env*.local
 
 # local folder
